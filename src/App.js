@@ -52,7 +52,7 @@ function App() {
   function resetResult(e) { 
   	// Add the code for the resetResult function 
     e.preventDefault();
-    resultRef.current.textContent = "0";
+    setResult(0);
     inputRef.current.focus();
 
   }; 
