@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+* {
+  font-family: sans-serif;
+}
+input,
+button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+input {
+  display: block;
+  margin-bottom: 20px;
+}
+button {
+  border: 1px solid rgba(128, 128, 128, 0.671);
+  background: rgb(196, 247, 255);
+  margin-right: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+}
+.appbox::before{
+  content: "";
+  background: url('./components/dan-cristian-padure-h3kuhYUCE9A-unsplash.jpg') no-repeat center/cover;
+  /* this syntax is for: imgUrl, repeat, bgPosition,bgSize */
+  opacity: 0.9;
+  position: absolute;
+
+  /* attach element to top left of the  appbox */
+  top: 0;
+  left: 0;
+
+  /* fill the appbox contained 100% */
+  width: 100%;
+  height: 100%;
+
+  /* z-index: -1 places the pseudo-element behind all other content in the containing element, so that it serves as a background element. */
+  z-index: -1;
+}
+.appbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1em ridge rgb(3, 3, 60);
+  border-radius: 10%;
+  padding: 5%;
+  width: 50%;
+  position: relative;
+}
+.result{
+  border: 1px solid salmon ;
+  border-radius: 8px;
+  padding-left:4% ;
+  color: red;
+  height: 5vh;
+  padding-top: 10px;
+  width: 19.8vw;
+  background-color: rgb(32, 35, 35);
+}
+.resetButtons{
+  margin-top: 5%;
+}
+.resetButtons button{
   color: white;
+  background-color: tomato;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.funcButtons{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin: 10%;
 }
